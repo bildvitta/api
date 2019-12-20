@@ -7,6 +7,31 @@
         "hint": "Obrigatório",
         "default": "",
         "type": "text"
+      },
+
+      {
+        "name": "city",
+        "type": "select",
+        "label": "Cidade",
+        "default": "1",
+        "options": [
+          { "value": "1", "label": "Ribeirão Preto" },
+          { "value": "2", "label": "Cravinhos" },
+          { "value": "3", "label": "Milho Branco" },
+          { "value": "4", "label": "Springfield" }
+        ]
+      },
+
+      {
+        "name": "colors",
+        "type": "checkbox",
+        "label": "Cores",
+        "default": ["red", "blue"],
+        "options": [
+          { "value": "red", "label": "Vermelho" },
+          { "value": "blue", "label": "Azul" },
+          { "value": "green", "label": "Verde" }
+        ]
       }
     ]
   }
