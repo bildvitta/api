@@ -1,11 +1,13 @@
 {
-  "fields": [
-    {
-      "name": "title",
-      "label": "Título",
-      "hint": "Obrigatório",
-      "default": "",
-      "type": "text"
-    }
-  ]
+  "fields": {
+    "fields": [
+      {
+        "name": "title",
+        "label": "Título",
+        "hint": "Obrigatório",
+        "default": "",
+        "type": "text"
+      }
+    ]
+  }
 }
