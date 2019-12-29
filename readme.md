@@ -22,9 +22,78 @@ Documentação do modelo oficial de API implementada pelos sistemas criados pela
 
 ### `GET`: `/:model`
 
-.
+A requisição pode conter uma porção de parâmetros para paginar, filtrar ou ordenar os resultados.
+
+| Chave | Tipo | Obrigatório | Descrição |
+|:-:|:-:|:-:|:-|
+| `limit` | `Number` | Não | Quantidade de itens que serão retornados. |
+| `offset` | `Number` | Não | Número do _index_ do primeiro item que será retornado, utilizado para paginação. |
+| `ordering` | `String` | Não | Nome dos campos que deverão ser ordenados. Devem ser informados na ordem de importância (do maior para o menor) separados por vírgula. Ao final de cada campo deve ser adicionado `_asc` para ascendente ou `_desc` para descendente. |
+| `search` | `String` | Não | Buscar um resultado genérico em um ou mais campos. |
+| `[filter]` | Qualquer | Não | Qualquer campo que puder ser filtrado. Caso o ambiente permita, pode-se incrementar o filtro com instruções, como `_gt` (_greater than_) para "maior que" ou `_eq` (_equal_) para "igual à". |
+
+**Exemplo:**
+
+```
+/:model?limit=12&offset=24&ordering=name_asc,title_desc&search=Test&status_eq=true
+```
+
+Já a resposta poderá conter [`status`](#status), [`fields`](#fields), [`results`](#results) e [`errors`](#errors) na seguinte ordem:
+
+``` json
+{
+  "status": {},
+  "fields": [],
+  "results": {},
+  "errors": {}
+}
+```
 
 ## Respostas
+
+### `errors`
+
+.
+
+### `fields`
+
+.
+
+### `result`
+
+Objeto contendo os campos e seus respectivos valores.
+
+``` json
+{
+  "id": "a1b2c3d4e5",
+  "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "author": {
+    "name": "John Appleseed"
+  },
+  "fields": [
+    {
+      "foo": true,
+      "bar": false
+    },
+    {
+      "foo": true,
+      "bar": false
+    }
+  ]
+}
+```
+
+### `results`
+
+Um _array_ contendo uma coleção de objetos semelhantes ao [`result`](#result).
+
+``` json
+[
+ {},
+ {},
+ {}
+]
+```
 
 ### `status`
 
@@ -34,3 +103,15 @@ Um objeto contendo os detalhes da requisição.
 |:-:|:-:|:-:|:-|
 | `code` | `Number` | Sim | Código do _status_ HTTP da requisição, como `200` ou `404`. |
 | `text` | `String` | Não | Mensagem específica contendo detalhes da requisição, geralmente utilizada quando há erros de servidor ou mensagens de sucesso. |
+
+
+
+
+
+
+
+
+
+
+
+
