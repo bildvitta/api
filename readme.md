@@ -29,8 +29,6 @@ A tabela abaixo relaciona os _endpoints_ com as possibilidades de resposta. Semp
 1. Nestes casos, os erros corresponderão aos campos de filtro.
 2. Ocasionalmente pode ser necessário que um formulário inicie com erros preestabelecidos.
 
-
-
 ### GET `/:model`
 
 A requisição pode conter uma porção de parâmetros para paginar, filtrar ou ordenar os resultados.
@@ -47,17 +45,6 @@ A requisição pode conter uma porção de parâmetros para paginar, filtrar ou 
 
 ```
 /:model?limit=12&offset=24&ordering=name_asc,title_desc&search=Test&status_eq=true
-```
-
-Já a resposta poderá conter [`status`](#status), [`fields`](#fields), [`results`](#results) e [`errors`](#errors) na seguinte ordem:
-
-``` json
-{
-  "status": {},
-  "fields": [],
-  "results": {},
-  "errors": {}
-}
 ```
 
 ## Respostas
