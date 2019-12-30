@@ -64,7 +64,18 @@ Já a resposta poderá conter [`status`](#status), [`fields`](#fields), [`result
 
 ### `errors`
 
-Objeto que deverá respeitar a mesma estrutura de chaves do [`result`](#result) que, ao invés de trazer os valores atuais, deverá retornar uma ou mais mensagens de erro (para mais de uma mensagem, a chave deverá estar relacionada à um _array_ de  `String`). 
+Objeto que deverá respeitar a mesma estrutura de chaves do [`result`](#result) que, ao invés de trazer os valores atuais, deverá retornar uma ou mais mensagens de erro (para mais de uma, o valor será um _array_ de  `String`). 
+
+``` json
+{
+  errors: {
+    "title": "O título não pode ficar em branco.",
+    "author": {
+      "name": ["Informe o nome completo.", "O nome precisa possuir 2 ou mais caracteres."]
+    }
+  }
+}
+```
 
 ### `fields`
 
