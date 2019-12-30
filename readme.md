@@ -5,20 +5,31 @@ Documentação do modelo oficial de API implementada pelos sistemas criados pela
 ## Premissas
 
 1. O formato padrão para a troca de dados é o JSON.
-1. A extensão do _endpoint_ é opcional para o formato padrão (`.json`) e, quando disponível, pode-se informar a extensão do padrão desejado, como `.xml` ou `.yml`.
-1. Os _endpoints_ devem funcionar com ou sem a barra no final do endereço.
-1. As chaves de envio e de retorno devem estar no padrão _snake case_.
+2. A extensão do _endpoint_ é opcional para o formato padrão (`.json`) e, quando disponível, pode-se informar a extensão do padrão alternativo desejado, como `.xml` ou `.yml`.
+3. Os _endpoints_ devem funcionar com ou sem a barra no final do endereço.
+4. As chaves de envio e de retorno devem estar no padrão _snake case_.
+5. Os endereços seguem o padrão REST.
 
 ## Endpoints
 
-- [**`GET`**: `/:model`](#get-model)
-- [**`POST`**: `/:model`](#)
-- [**`GET`**: `/:model/filters`](#)
-- [**`GET`**: `/:model/new`](#)
-- [**`GET`**: `/:model/:id`](#)
-- [**`PUT`**: `/:model/:id`](#)
-- [**`DELETE`**: `/:model/:id`](#)
-- [**`GET`**: `/:model/:id/edit`](#)
+A tabela abaixo relaciona os _endpoints_ com as possibilidades de resposta.
+
+| Método | Endpoint | `errors` | `fields` | `result` | `results` | `status` |
+|:------:|:---------|:--------:|:--------:|:--------:|:---------:|:--------:|
+| GET | [`/:model`](#get-model) | :heavy_check_mark:¹ | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: |
+| GET | `/:model/new` | :heavy_check_mark:² | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
+| GET | `/:model/filters` | :x: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
+| GET | `/:model/:id` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| GET | `/:model/:id/edit` | :heavy_check_mark:² | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| POST | `/:model` | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
+| DELETE | `/:model/:id` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| PATCH | `/:model/:id` | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
+| PUT | `/:model/:id` | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
+
+1. Nestes casos, os erros corresponderão aos campos de filtro.
+2. Ocasionalmente pode ser necessário que um formulário inicie com erros preestabelecidos.
+
+
 
 ### `GET`: `/:model`
 
