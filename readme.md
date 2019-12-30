@@ -96,14 +96,14 @@ As chaves existentes para cada campo são:
 | `min` | `Number` | `decimal`, `number`, `percent` ou `money` | Não | Numeral mínimo. |
 | `minlength` | `Number` | `text` ou `textarea` | Não | Número mínimo de caracteres. |
 | `multiple` | `Boolean` | `select` ou `upload` | Não | Indica se serão aceitas múltiplas respostas ou múltiplos arquivos. |
-| `name` | 
-| `options` |
-| `places` |
-| `prefix` |
+| `name` |  `String` | Todos | Sim | Nome do campo em _snake case_. |
+| `options` | `Array` | `checkbox`, `radio` ou `select` | Sim | Uma coleção de objetos no formato: `{ label: 'Item', value: 'item' }`. |
+| `places` | `Number` | `decimal`, `percent` ou `money` | Não | Número de casas decimais. O padrão é `2`. |
+| `prefix` | `String` | `date`, `datetime`, `decimal`, `money`, `number`, `percent`, `select`, `text` ou `time`. | Não | Texto que aparece antes do campo. |
 | `readonly` | `Boolean` | Todos | Não | Desabilita a edição no campo. |
 | `required` | `Boolean` | Todos | Não | Indica a obrigatoriedade dos campos. |
-| `suffix` |
-| `type` | `` |
+| `suffix` | `String` | `date`, `datetime`, `decimal`, `money`, `number`, `percent`, `select`, `text` ou `time`. | Não | Texto que aparece depois do campo. |
+| `type` | `String` | Todos | Não | Define o tipo de campo (um dos listados abaixo). Quando omitido o padrão é `text`. |
 
 E os possíveis tipos são:
 
@@ -142,8 +142,8 @@ Objeto contendo os campos e seus respectivos valores atuais.
         "bar": false
       },
       {
-        "foo": true,
-        "bar": false
+        "foo": false,
+        "bar": true
       }
     ]
   }
