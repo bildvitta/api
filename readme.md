@@ -66,7 +66,63 @@ Objeto que deverá respeitar a mesma estrutura de chaves do [`result`](#result) 
 
 ### `fields`
 
-.
+Cada item deste _array_ contém o detalhamento de um campo do formulário.
+
+``` json
+{
+  "fields": [
+    {
+      "name": "title",
+      "label": "Título",
+      "hint": "Obrigatório",
+      "default": "",
+      "type": "text"
+    }
+  ]
+}
+```
+
+As chaves existentes para cada campo são:
+
+| Chave | Tipo | Campos | Obrigatório | Descrição |
+|:-:|:-:|:-:|:-:|:-|
+| `default` | Todos | Todos | Não | Indica o valor inicial do campo quando não há valor atual. |
+| `entity` | `String` | `upload` | Sim | Define o caminho para o armazenamento dos arquivos. |
+| `extensions` | `Array` | `upload` | Não | Lista das extensões de arquivo permitidas para upload. Exemplo: `['jpg', 'png']`. |
+| `hint` | `String` | Todos | Não | Texto de ajuda para complementar o rótulo. |
+| `label` | `String` | Todos | Não | Rótulo do campo. Quando não informado, assume o valor de `name`. |
+| `max` | `Number` | `decimal`, `number`, `percent` ou `money` | Não | Numeral máximo. |
+| `maxlength` | `Number` | `text` ou `textarea` | Não | Número máximo de caracteres. |
+| `min` | `Number` | `decimal`, `number`, `percent` ou `money` | Não | Numeral mínimo. |
+| `minlength` | `Number` | `text` ou `textarea` | Não | Número mínimo de caracteres. |
+| `multiple` | `Boolean` | `select` ou `upload` | Não | Indica se serão aceitas múltiplas respostas ou múltiplos arquivos. |
+| `name` | 
+| `options` |
+| `places` |
+| `prefix` |
+| `readonly` | `Boolean` | Todos | Não | Desabilita a edição no campo. |
+| `required` | `Boolean` | Todos | Não | Indica a obrigatoriedade dos campos. |
+| `suffix` |
+| `type` | `` |
+
+E os possíveis tipos são:
+
+- `boolean`
+- `checkbox`
+- `color`
+- `date`
+- `datetime`
+- `decimal`
+- `editor`
+- `money`
+- `number`
+- `percent`
+- `radio`
+- `select`
+- `text`
+- `textarea`
+- `time`
+- `upload`
 
 ### `result`
 
