@@ -97,12 +97,12 @@ As chaves existentes para cada campo são:
 | `minlength` | `Number` | `text` ou `textarea` | Não | Número mínimo de caracteres. |
 | `multiple` | `Boolean` | `select` ou `upload` | Não | Indica se serão aceitas múltiplas respostas ou múltiplos arquivos. |
 | `name` |  `String` | Todos | Sim | Nome do campo em _snake case_. |
-| `options` | `Array` | `checkbox`, `radio` ou `select` | Sim | Uma coleção de objetos no formato: `{ label: 'Item', value: 'item' }`. |
+| `options` | `Array` | `checkbox`, `radio` ou `select` | Sim | Uma coleção de objetos no formato `{ label: 'Item', value: 'item' }`, onde cada um define um item para seleção. |
 | `places` | `Number` | `decimal`, `percent` ou `money` | Não | Número de casas decimais. O padrão é `2`. |
 | `prefix` | `String` | `date`, `datetime`, `decimal`, `money`, `number`, `percent`, `select`, `text` ou `time`. | Não | Texto que aparece antes do campo. |
 | `readonly` | `Boolean` | Todos | Não | Desabilita a edição no campo. |
-| `required` | `Boolean` | Todos | Não | Indica a obrigatoriedade dos campos. |
-| `suffix` | `String` | `date`, `datetime`, `decimal`, `money`, `number`, `percent`, `select`, `text` ou `time`. | Não | Texto que aparece depois do campo. |
+| `required` | `Boolean` | Todos | Não | Indica a obrigatoriedade do campo. |
+| `suffix` | `String` | `date`, `datetime`, `decimal`, `money`, `number`, `percent`, `select`, `text` ou `time`. | Não | Texto que aparece após o campo. |
 | `type` | `String` | Todos | Não | Define o tipo de campo (um dos listados abaixo). Quando omitido o padrão é `text`. |
 
 E os possíveis tipos são:
