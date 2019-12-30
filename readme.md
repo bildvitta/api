@@ -91,16 +91,17 @@ As chaves existentes para cada campo são:
 | `extensions` | `Array` | `upload` | Não | Lista das extensões de arquivo permitidas para upload. Exemplo: `['jpg', 'png']`. |
 | `hint` | `String` | Todos | Não | Texto de ajuda para complementar o rótulo. |
 | `label` | `String` | Todos | Não | Rótulo do campo. Quando não informado, assume o valor de `name`. |
+| `mask` | `String` | `text` | Não | Define uma máscara para o campo, pode se utilizar uma pré-definida ou utilizar as regras para a criação de uma máscara personalizada. |
 | `max` | `Number` | `decimal`, `number`, `percent` ou `money` | Não | Numeral máximo. |
-| `maxlength` | `Number` | `text` ou `textarea` | Não | Número máximo de caracteres. |
+| `max_length` | `Number` | `text` ou `textarea` | Não | Número máximo de caracteres. |
 | `min` | `Number` | `decimal`, `number`, `percent` ou `money` | Não | Numeral mínimo. |
-| `minlength` | `Number` | `text` ou `textarea` | Não | Número mínimo de caracteres. |
+| `min_length` | `Number` | `text` ou `textarea` | Não | Número mínimo de caracteres. |
 | `multiple` | `Boolean` | `select` ou `upload` | Não | Indica se serão aceitas múltiplas respostas ou múltiplos arquivos. |
 | `name` |  `String` | Todos | Sim | Nome do campo em _snake case_. |
-| `options` | `Array` | `checkbox`, `radio` ou `select` | Sim | Uma coleção de objetos no formato `{ label: 'Item', value: 'item' }`, onde cada um define um item para seleção. |
+| `options` | `Array` | `checkbox`, `radio` ou `select` | Sim | Uma coleção de objetos no formato `{ label: 'Item', value: 'item' }`, onde cada um define um item para seleção. É possível ainda criar grupos de opções adicionando a chave `children: []` no item e as respectivas opções. |
 | `places` | `Number` | `decimal`, `percent` ou `money` | Não | Número de casas decimais. O padrão é `2`. |
 | `prefix` | `String` | `date`, `datetime`, `decimal`, `money`, `number`, `percent`, `select`, `text` ou `time`. | Não | Texto que aparece antes do campo. |
-| `readonly` | `Boolean` | Todos | Não | Desabilita a edição no campo. |
+| `read_only` | `Boolean` | Todos | Não | Desabilita a edição no campo. |
 | `required` | `Boolean` | Todos | Não | Indica a obrigatoriedade do campo. |
 | `suffix` | `String` | `date`, `datetime`, `decimal`, `money`, `number`, `percent`, `select`, `text` ou `time`. | Não | Texto que aparece após o campo. |
 | `type` | `String` | Todos | Não | Define o tipo de campo (um dos listados abaixo). Quando omitido o padrão é `text`. |
