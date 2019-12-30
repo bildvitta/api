@@ -14,8 +14,8 @@ Documentação do modelo oficial de API implementada pelos sistemas criados pela
 
 A tabela abaixo relaciona os _endpoints_ com as possibilidades de resposta.
 
-| Método | Endpoint | `errors` | `fields` | `result` | `results` | `status` |
-|:------:|:---------|:--------:|:--------:|:--------:|:---------:|:--------:|
+| Método | Endpoint | [`errors`](#errors) | [`fields`](#fields) | [`result`](#result) | [`results`](#results) | [`status`](#status) |
+|:-:|:-|:-:|:-:|:-:|:-:|:-:|
 | GET | [`/:model`](#get-model) | :heavy_check_mark:¹ | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: |
 | GET | `/:model/new` | :heavy_check_mark:² | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
 | GET | `/:model/filters` | :x: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
@@ -31,7 +31,7 @@ A tabela abaixo relaciona os _endpoints_ com as possibilidades de resposta.
 
 
 
-### `GET`: `/:model`
+### GET | `/:model`
 
 A requisição pode conter uma porção de parâmetros para paginar, filtrar ou ordenar os resultados.
 
