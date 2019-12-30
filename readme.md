@@ -55,7 +55,7 @@ Objeto que deverá respeitar a mesma estrutura de chaves do [`result`](#result) 
 
 ``` json
 {
-  errors: {
+  "errors": {
     "title": "O título não pode ficar em branco.",
     "author": {
       "name": ["Informe o nome completo.", "O nome precisa possuir 2 ou mais caracteres."]
@@ -74,21 +74,23 @@ Objeto contendo os campos e seus respectivos valores atuais.
 
 ``` json
 {
-  "id": "a1b2c3d4e5",
-  "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "author": {
-    "name": "John Appleseed"
-  },
-  "fields": [
-    {
-      "foo": true,
-      "bar": false
+  "result": {
+    "id": "a1b2c3d4e5",
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "author": {
+      "name": "John Appleseed"
     },
-    {
-      "foo": true,
-      "bar": false
-    }
-  ]
+    "fields": [
+      {
+        "foo": true,
+        "bar": false
+      },
+      {
+        "foo": true,
+        "bar": false
+      }
+    ]
+  }
 }
 ```
 
