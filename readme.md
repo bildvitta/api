@@ -31,7 +31,7 @@ A tabela abaixo relaciona os _endpoints_ com as possibilidades de resposta.
 
 
 
-### GET | `/:model`
+### GET `/:model`
 
 A requisição pode conter uma porção de parâmetros para paginar, filtrar ou ordenar os resultados.
 
@@ -98,14 +98,6 @@ Objeto contendo os campos e seus respectivos valores.
 
 Um _array_ contendo uma coleção de objetos semelhantes ao [`result`](#result).
 
-``` json
-[
- {},
- {},
- {}
-]
-```
-
 ### `status`
 
 Um objeto contendo os detalhes da requisição.
@@ -115,9 +107,16 @@ Um objeto contendo os detalhes da requisição.
 | `code` | `Number` | Sim | Código do _status_ HTTP da requisição, como `200` ou `404`. |
 | `text` | `String` | Não | Mensagem específica contendo detalhes da requisição, geralmente utilizada quando há erros de servidor ou mensagens de sucesso. |
 
+Por exemplo, ao solicitar a remoção de um item:
 
-
-
+``` json
+{
+  "status": {
+    "code": 200,
+    "text": "O item foi deletado com sucesso!"
+  }
+}
+```
 
 
 
