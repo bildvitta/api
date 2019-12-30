@@ -12,7 +12,7 @@ Documentação do modelo oficial de API implementada pelos sistemas criados pela
 
 ## Endpoints
 
-A tabela abaixo relaciona os _endpoints_ com as possibilidades de resposta.
+A tabela abaixo relaciona os _endpoints_ com as possibilidades de resposta. Sempre que um endereço possuir parâmetros de consulta, este estará documentado posteriormente.
 
 | Método | Endpoint | [`errors`](#errors) | [`fields`](#fields) | [`result`](#result) | [`results`](#results) | [`status`](#status) |
 |:-:|:-|:-:|:-:|:-:|:-:|:-:|
@@ -64,7 +64,7 @@ Já a resposta poderá conter [`status`](#status), [`fields`](#fields), [`result
 
 ### `errors`
 
-.
+Objeto que deverá respeitar a mesma estrutura de chaves do [`result`](#result) que, ao invés de trazer os valores atuais, deverá retornar uma ou mais mensagens de erro (para mais de uma mensagem, a chave deverá estar relacionada à um _array_ de  `String`). 
 
 ### `fields`
 
@@ -72,7 +72,7 @@ Já a resposta poderá conter [`status`](#status), [`fields`](#fields), [`result
 
 ### `result`
 
-Objeto contendo os campos e seus respectivos valores.
+Objeto contendo os campos e seus respectivos valores atuais.
 
 ``` json
 {
@@ -117,11 +117,3 @@ Por exemplo, ao solicitar a remoção de um item:
   }
 }
 ```
-
-
-
-
-
-
-
-
