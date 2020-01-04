@@ -51,12 +51,12 @@ A requisição pode conter uma porção de parâmetros para paginar, filtrar ou 
 
 ### `errors`
 
-Objeto que deverá respeitar a mesma estrutura de chaves do [`result`](#result) que, ao invés de trazer os valores atuais, deverá retornar uma ou mais mensagens de erro (para mais de uma, o valor será um _array_ de  `String`). 
+Objeto que deverá respeitar a mesma estrutura de chaves do [`result`](#result) que, ao invés de trazer os valores atuais, deverá retornar uma ou mais mensagens de erro, sempre dentro de um _array_. 
 
 ``` json
 {
   "errors": {
-    "title": "O título não pode ficar em branco.",
+    "title": ["O título não pode ficar em branco."],
     "author": {
       "name": ["Informe o nome completo.", "O nome precisa possuir 2 ou mais caracteres."]
     }
