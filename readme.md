@@ -125,6 +125,18 @@ E os possíveis tipos são:
 - `time`
 - `upload`
 
+### `metadata`
+
+Dados extras ao `result`/`results`.
+
+``` json
+{
+  "metadata": {
+    "foo": "bar"
+  }
+}
+```
+
 ### `result`
 
 Objeto contendo os campos e seus respectivos valores atuais.
