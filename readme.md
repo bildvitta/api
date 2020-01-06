@@ -14,17 +14,17 @@ Documentação do modelo oficial de API implementada pelos sistemas criados pela
 
 A tabela abaixo relaciona os _endpoints_ com as possibilidades de resposta. Sempre que um endereço possuir parâmetros de consulta, este estará documentado posteriormente.
 
-| Método | Endpoint | [`errors`](#errors) | [`fields`](#fields) | [`result`](#result) | [`results`](#results) | [`status`](#status) |
-|:-:|:-|:-:|:-:|:-:|:-:|:-:|
-| GET | [`/:model`](#get-model) | :heavy_check_mark:¹ | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: |
-| GET | `/:model/new` | :heavy_check_mark:² | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
-| GET | `/:model/filters` | :x: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
-| GET | `/:model/:id` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
-| GET | `/:model/:id/edit` | :heavy_check_mark:² | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
-| POST | `/:model` | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
-| DELETE | `/:model/:id` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
-| PATCH | `/:model/:id` | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
-| PUT | `/:model/:id` | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
+| Método | Endpoint | [`errors`](#errors) | [`fields`](#fields) | [`metadata`](#metadata) | [`result`](#result) | [`results`](#results) | [`status`](#status) |
+|:-:|:-|:-:|:-:|:-:|:-:|:-:|:-:|
+| GET | [`/:model`](#get-model) | :heavy_check_mark:¹ | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: |
+| GET | `/:model/new` | :heavy_check_mark:² | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
+| GET | `/:model/filters` | :x: | :heavy_check_mark: | :x: | :x: | :x: | :heavy_check_mark: |
+| GET | `/:model/:id` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| GET | `/:model/:id/edit` | :heavy_check_mark:² | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| POST | `/:model` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| DELETE | `/:model/:id` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| PATCH | `/:model/:id` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| PUT | `/:model/:id` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 
 1. Nestes casos, os erros corresponderão aos campos de filtro.
 2. Ocasionalmente pode ser necessário que um formulário inicie com erros preestabelecidos.
