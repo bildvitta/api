@@ -1,6 +1,6 @@
-title: "API BildVitta"
+title: "API Bild & Vitta"
 remote_theme: just-the-docs/just-the-docs
-color_scheme: "light"
+color_scheme: "dark"
 search_enabled: true
 
 # Version of mermaid library
