@@ -1,7 +1,12 @@
 title: "API Bild & Vitta"
+description: "Documentação do modelo oficial de API implementada pelos sistemas criados pela inovação Bild & Vitta."
+baseurl: "/api" # the subpath of your site, e.g. /blog
+url: "https://bildvitta.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
 remote_theme: just-the-docs/just-the-docs
 color_scheme: "dark"
 search_enabled: true
+permalink: pretty
 
 # Version of mermaid library
 # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
